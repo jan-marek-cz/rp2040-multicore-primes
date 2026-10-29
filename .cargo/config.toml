@@ -1,0 +1,6 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+# Board in BOOTSEL mode (shows up as RPI-RP2 drive) -> convert ELF to UF2 and copy it there.
+runner = "elf2uf2-rs -d"
+
+[build]
+target = "thumbv6m-none-eabi" # Cortex-M0+ (RP2040)
